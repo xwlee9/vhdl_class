@@ -1,0 +1,34 @@
+vcom -f compile_vhdl.f
+# QuestaSim-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tlc
+# -- Compiling architecture behavior of tlc
+# -- Compiling entity timer
+# -- Compiling architecture behavior of timer
+# -- Compiling entity tlc_tb
+# -- Compiling architecture behavior of tlc_tb
+# -- Loading entity timer
+# -- Loading entity tlc
+vsim -do "run -all" vlc_tb
+# vsim -do {run -all} vlc_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Error: Failed to find design unit work.vlc_tb.
+# Optimization failed
+# Error loading design
+vsim -do "run -all" tlc_tb
+# vsim -do {run -all} tlc_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tlc_tb(behavior)#1
+# run -all 
+add wave -position insertpoint sim:/tlc_tb/*
+quit -sim
+transcript file ""

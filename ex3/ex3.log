@@ -1,0 +1,63 @@
+vcom -f compile_vhdl.f
+# QuestaSim-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cnt1
+# -- Compiling architecture cnt1_behav of cnt1
+# -- Compiling entity cnt2
+# -- Compiling architecture cnt2_behav of cnt2
+# -- Compiling entity testbench1
+# -- Compiling architecture test_behav1 of testbench1
+# -- Loading entity cnt1
+# -- Compiling entity testbench2
+# -- Compiling architecture test_behav2 of testbench2
+# -- Loading entity cnt2
+vsim -vopt work.testbench1
+# vsim -vopt work.testbench1 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench1(test_behav1)#1
+add wave -position insertpoint sim:/testbench1/uut/*
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vsim -vopt work.testbench2
+# vsim -vopt work.testbench2 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench2(test_behav2)#1
+add wave -position insertpoint sim:/testbench2/uut/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+transcript file ""

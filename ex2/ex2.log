@@ -1,0 +1,26 @@
+vcom -f compile_vhdl.f 
+# QuestaSim-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tally
+# -- Compiling architecture loopy of tally
+# -- Loading package ENV
+# -- Compiling entity tally_tb
+# -- Compiling architecture test of tally_tb
+# ** Warning: [4] tally_tb.vhd(72): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vsim -do "run -all" tally
+# vsim -do {run -all} tally 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tally(loopy)#1
+# run -all 
+# ** Note: No decision
+#    Time: 0 ns  Iteration: 0  Instance: /tally
+quit -sim 
+transcript file ""
